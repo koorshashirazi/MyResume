@@ -35,12 +35,15 @@
 </head>
 
 <body id="top">
+
+  <div id="header-nav-page"></div>
+
   <div class="page-content">
     <div id="content">
 
       <!-- ************************************************************************************************************* -->
       <!-- Header -->
-      <header id="header-page"></header>
+      <div id="header-page"></div>
       <!-- END Header -->
       <!-- ************************************************************************************************************* -->
 
@@ -101,6 +104,7 @@
 
     <script defer>
 
+      const globalScope = typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : global;
 
       function loadScript(src, callback) {
         let script = document.createElement("script");
@@ -111,6 +115,11 @@
         document.body.appendChild(script);
       }
 
+      fetch('./pages/header-nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('#header-nav-page').innerHTML = data;
+        });
 
       fetch('./pages/header.html')
         .then(response => response.text())

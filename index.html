@@ -104,6 +104,7 @@
 
     <script defer>
 
+      const globalScope = typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : global;
 
       function loadScript(src, callback) {
         let script = document.createElement("script");
