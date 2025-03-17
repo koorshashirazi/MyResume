@@ -3,6 +3,7 @@
 <html lang="en-US">
 
 <head>
+    <base href="/" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,6 +70,8 @@
     <span class="dismiss">🗙</span>
 </div>
 
+<script src="_framework/blazor.webassembly.js"></script>
+
 <script defer>
 
 
@@ -83,7 +86,6 @@
 
     window.onload = function () {
         let scripts = [
-             "./_framework/blazor.webassembly.js",
             "./scripts/imagesloaded.pkgd.min.js",
             "./scripts/masonry.pkgd.min.js",
             "./scripts/BigPicture.min.js",
