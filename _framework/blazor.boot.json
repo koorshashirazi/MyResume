@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PersianCat.Resume",
   "resources": {
-    "hash": "sha256-bhuvKMJoyng4WaXkkg/7GjQaL7fjPBykU7iOVWUvFpQ=",
+    "hash": "sha256-AaBK1d5T2yRsXtRFISqp/7hPTl+910Wbrog9MzljBKg=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.vtsnbgl3sx.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.pq1s9tpl5w.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -39,7 +39,9 @@
       "dotnet.native.tf1yz4dop7.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.runtime.tsg4gsv2hg.js": "dotnet.runtime.js",
-      "icudt.oh1zvcfom8.dat": "icudt.dat"
+      "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
+      "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
+      "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat"
     },
     "jsModuleNative": {
       "dotnet.native.2ugmiy9gdc.js": "sha256-RlcAz/486MXaIIFuL44+jDfmv2jx813CcGdwObzEbfk="
@@ -51,7 +53,9 @@
       "dotnet.native.tf1yz4dop7.wasm": "sha256-yZ6SgodTFD5CQf/V5z81RcPx51SUgkghO7zihHiSyos="
     },
     "icu": {
-      "icudt.oh1zvcfom8.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
+      "icudt_CJK.tjcz0u77k5.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
+      "icudt_EFIGS.tptq2av103.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
+      "icudt_no_CJK.lfu7j35m59.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "coreAssembly": {
       "System.Private.CoreLib.xq3y7avosp.wasm": "sha256-h/kQ2k8PUI+M2admL7lXSaLdMg/zuE0b4YcUjPGrn4c=",
@@ -93,7 +97,7 @@
   "cacheBootResources": true,
   "debugLevel": 0,
   "linkerEnabled": true,
-  "globalizationMode": "all",
+  "globalizationMode": "sharded",
   "extensions": {
     "blazor": {}
   }
