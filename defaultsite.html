@@ -7,18 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Persian Cat</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" media="print"
-    onload="this.media='all'" />
+        onload="this.media='all'"/>
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"/>
   </noscript>
   <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
+  <link href="./css/blazor.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/roadmap.css?ver=1.2.0" rel="stylesheet">
 
   <noscript>
@@ -29,154 +30,80 @@
       }
     </style>
   </noscript>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1E4WT8H1B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      try {
+        dataLayer.push(arguments);
+      }
+      catch (e) {
+
+      }
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-D1E4WT8H1B');
+  </script>
+
 </head>
 
 <body id="top">
 
-  <div id="header-nav"></div>
+<div id="app">
+  <svg class="loading-progress">
+    <circle r="40%" cx="50%" cy="50%"/>
+    <circle r="40%" cx="50%" cy="50%"/>
+  </svg>
+  <div class="loading-progress-text"></div>
+</div>
 
-  <div class="page-content">
-    <div id="content">
+<div id="blazor-error-ui">
+  An unhandled error has occurred.
+  <a href="." class="reload">Reload</a>
+  <span class="dismiss">🗙</span>
+</div>
 
-      <!-- ************************************************************************************************************* -->
-      <!-- Header -->
-      <div id="header-page"></div>
-      <!-- END Header -->
-      <!-- ************************************************************************************************************* -->
+<script src="_framework/blazor.webassembly.js"></script>
 
-      <!-- ************************************************************************************************************* -->
-      <!-- about -->
-      <div id="about-page"></div>
-      <!-- END about -->
-      <!-- ************************************************************************************************************* -->
-
-      <!-- ************************************************************************************************************* -->
-      <!-- My specializations -->
-      <div id="specializations-page"></div>
-
-      <!-- END My specializations -->
-      <!-- ************************************************************************************************************* -->
-
-      <!-- ************************************************************************************************************* -->
-      <!-- My Skills -->
-      <div id="skills-page"></div>
-      <!-- END My Skills -->
-      <!-- ************************************************************************************************************* -->
-
-      <!-- ************************************************************************************************************* -->
-      <!-- experience -->
-      <div id="experience-page"></div>
-
-      <!-- ************************************************************************************************************* -->
-      <!-- END experience -->
-
-      <!-- ************************************************************************************************************* -->
-      <!-- Roadmap -->
-      <div id="roadmap-page"></div>
-
-      <!-- ************************************************************************************************************* -->
-      <!-- END Roadmap -->
-
-      <!-- ************************************************************************************************************* -->
-      <!-- contact -->
-      <div id="contact-page"></div>
-      <!-- ************************************************************************************************************* -->
-      <!-- END contact -->
-
-      <!-- ************************************************************************************************************* -->
-      <!-- footer -->
-      <div id="footer-page"></div>
-      <!-- ************************************************************************************************************* -->
-      <!-- END footer -->
-    </div>
-
-    <div id="scrolltop">
-      <a class="btn btn-secondary" href="#top" title="Go to top">
-        <span class="icon">
-          <i class="fas fa-angle-up fa-x"></i>
-        </span>
-      </a>
-    </div>
+<script defer>
 
 
+  function loadScript(src, callback) {
+    let script = document.createElement("script");
+    script.src = src;
+    if (callback) {
+      script.onload = callback;
+    }
+    document.body.appendChild(script);
+  }
 
-    <div>
+  window.onload = function () {
+    let scripts = [
+      "./scripts/imagesloaded.pkgd.min.js",
+      "./scripts/masonry.pkgd.min.js",
+      "./scripts/BigPicture.min.js",
+      "./scripts/purecounter.min.js",
+      "./scripts/bootstrap.bundle.min.js",
+      "./scripts/aos.min.js",
+      "./scripts/main.js"
+    ];
+    for (const scriptPath of scripts) {
+      loadScript(scriptPath);
+    }
+  };
 
-      <script defer>
+  if (window.location.pathname.includes("/")) {
+    // loadScript()
+  }
 
-        const globalScope = typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : global;
 
-        function loadScript(src, callback) {
-          let script = document.createElement("script");
-          script.src = src;
-          if (callback) {
-            script.onload = callback;
-          }
-          document.body.appendChild(script);
-        }
+</script>
 
-        fetch('./pages/header-nav.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#header-nav').innerHTML = data;
-          });
-
-        fetch('./pages/header.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#header-page').innerHTML = data;
-          });
-
-        fetch('./pages/about.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#about-page').innerHTML = data;
-          });
-
-        fetch('./pages/specializations.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#specializations-page').innerHTML = data;
-          });
-
-        fetch('./pages/skills.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#skills-page').innerHTML = data;
-          });
-
-        fetch('./pages/experience.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#experience-page').innerHTML = data;
-          });
-
-        fetch('./pages/roadmap.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#roadmap-page').innerHTML = data;
-          });
-
-        fetch('./pages/contact.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#contact-page').innerHTML = data;
-          });
-
-        fetch('./pages/footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.querySelector('#footer-page').innerHTML = data;
-          });
-
-      </script>
-      <script src="./scripts/imagesloaded.pkgd.min.js"></script>
-      <script src="./scripts/masonry.pkgd.min.js"></script>
-      <script src="./scripts/BigPicture.min.js"></script>
-      <script src="./scripts/purecounter.min.js"></script>
-      <script src="./scripts/purecounter.min.js"></script>
-      <script src="./scripts/aos.min.js"></script>
-      <script src="./scripts/main.js"></script>
 </body>
 
 </html>
