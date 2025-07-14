@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PersianCat.Resume",
   "resources": {
-    "hash": "sha256-Odzgn2CSH+bpGHBf2FTDn4rOMDszcE3L4Au7ctR2KoQ=",
+    "hash": "sha256-U4kOlkAKwNao8GFmUxoXqazd+dr8uR/l2Xvf8OsIFG0=",
     "fingerprinting": {
       "Blazored.LocalStorage.12n6dz54qr.wasm": "Blazored.LocalStorage.wasm",
       "Microsoft.AspNetCore.Components.z564h3hntn.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -54,7 +54,7 @@
       "System.e3zjcgk0va.wasm": "System.wasm",
       "netstandard.4qhu1xy7ok.wasm": "netstandard.wasm",
       "System.Private.CoreLib.go1ruyge41.wasm": "System.Private.CoreLib.wasm",
-      "PersianCat.Resume.vmjrhnlhmx.wasm": "PersianCat.Resume.wasm",
+      "PersianCat.Resume.sn6mtypuic.wasm": "PersianCat.Resume.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.st0ovrfdhi.js": "dotnet.native.js",
       "dotnet.native.67rumul467.wasm": "dotnet.native.wasm",
@@ -127,7 +127,7 @@
       "System.Threading.0cx7wsbxpk.wasm": "sha256-gFs3XkrV7taLib8Qmri1Wg6A1mYyGihnV6D5ggE5LUY=",
       "System.e3zjcgk0va.wasm": "sha256-lrs/UyncE8iGHZBiACLKRTCGeN96e2DCnxdT0uncmRg=",
       "netstandard.4qhu1xy7ok.wasm": "sha256-xKW1V9IZ652Xl+r/yPdSl41onEUzzXtifablsU/dEAo=",
-      "PersianCat.Resume.vmjrhnlhmx.wasm": "sha256-J5nEvMVBrcRCerkkmnggEsN9N9DXb0EN6992uACDau0="
+      "PersianCat.Resume.sn6mtypuic.wasm": "sha256-OODm53xpNIYqJbytgAjtfXdokH19s4cMwogb28K5GYQ="
     }
   },
   "cacheBootResources": true,
